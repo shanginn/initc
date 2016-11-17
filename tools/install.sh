@@ -51,8 +51,6 @@ main() {
     exit 1
   }
 
-  $INITC/initc
-
   printf "${GREEN}"
   echo '__/\\\\\\\\\\\______________________________________________/\\\\\\\\\_________'
   echo '__\/////\\\///____________________________________________/\\\////////_________'
@@ -65,6 +63,12 @@ main() {
   echo '_________\///////////___\///____\///___\///_______\/////___________\/////////__'
   echo ''
   printf "${NORMAL}"
+
+  # Copy default configs
+  cp -i -r $INITC/home/{.*} ${HOME}/
+
+  # Install oh-my-zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 }
 
 install_deps () {
