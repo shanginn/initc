@@ -71,7 +71,7 @@ install_deps () {
   curl -O https://raw.githubusercontent.com/shanginn/initc/master/tools/pacapt
   chmod +x pacapt
   ./pacapt -Sy
-  ./pacapt -S -y curl vim htop git zsh
+  ./pacapt -S curl vim htop git zsh -y
   rm -f pacapt
 }
 
