@@ -64,9 +64,16 @@ main() {
   echo '_________/\\\\\\\\\\\__\/\\\___\/\\\__\/\\\_____\//\\\\\_______\////\\\\\\\\\__'
   echo '_________\///////////___\///____\///___\///_______\/////___________\/////////__'
   echo ''
-  echo 'Console is ready for use!'
   printf "${NORMAL}"
-  env zsh
 }
 
+install_deps () {
+  curl -O https://raw.githubusercontent.com/shanginn/initc/master/tools/pacapt
+  chmod +x pacapt
+  ./pacapt -Sy
+  ./pacapt -S curl vim htop git zsh
+  rm -f pacapt
+}
+
+install_deps
 main
