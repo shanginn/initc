@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Install dependencies
+./pacapt -Sy
+./pacapt -S curl vim htop git zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Copy default configs
+cp -i -r home/ ${HOME}/
