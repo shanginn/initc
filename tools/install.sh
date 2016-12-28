@@ -65,7 +65,8 @@ main() {
   printf "${NORMAL}"
 
   # Copy default configs
-  cp -i -r $INITC/home/{.*} ${HOME}/
+  cp -i -r ${INITC}/home/.* ${HOME}/
+  rm -rf ${INITC}
 
   # Install oh-my-zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
