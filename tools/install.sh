@@ -65,7 +65,7 @@ main() {
   printf "${NORMAL}"
 
   # Copy default configs
-  cp -i -r ${INITC}/home/.* ${HOME}/
+  cp -ir ${INITC}/home/.[^.]* ~
   rm -rf ${INITC}
 
   # Install oh-my-zsh
@@ -75,8 +75,8 @@ main() {
 install_deps () {
   curl -O https://raw.githubusercontent.com/shanginn/initc/master/tools/pacapt
   chmod +x pacapt
-  ./pacapt -Sy
-  ./pacapt --noconfirm -S curl vim htop git zsh
+  sudo ./pacapt -Sy
+  sudo ./pacapt --noconfirm -S curl vim htop git zsh
   rm -f pacapt
 }
 
