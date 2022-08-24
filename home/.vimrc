@@ -59,6 +59,7 @@ set tm=500
 
 colorscheme mustang
 
+set encoding=utf8
 set list
 set listchars=tab:――,trail:·,extends:#,nbsp:·
 
